@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Old Town Fashions – Earrings & Designer Handbags | Udaipur</title>
+  <meta name="description" content="Old Town Fashions – Luxury earrings, designer handbags, and ethnic accessories from the heart of Udaipur, Rajasthan. Shop online across India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  
+  <style>/* ============================================
+   OLD TOWN FASHIONS — Premium CSS
+   Palette: Ivory #FAF7F2, Gold #C9A84C, Black #1A1210, Blush #F0D9CC
+   Type: Cormorant Garamond (display) + Jost (body)
+   ============================================ */
+
+:root {
+  --ivory: #FAF7F2;
+  --ivory-2: #F3EDE3;
+  --gold: #C9A84C;
+  --gold-light: #E8CC7A;
+  --gold-dark: #9E7A30;
+  --black: #1A1210;
+  --charcoal: #2E2820;
+  --warm-grey: #8A7F74;
+  --blush: #F0D9CC;
+  --white: #FFFFFF;
+  --text: #1A1210;
+  --text-muted: #7A6F65;
+  --bg: #FAF7F2;
+  --bg-2: #F3EDE3;
+  --card-bg: #FFFFFF;
+  --border: #E5DDD5;
+  --header-bg: rgba(250,247,242,0.96);
+  --shadow: 0 4px 24px rgba(26,18,16,0.08);
+  --shadow-hover: 0 12px 48px rgba(26,18,16,0.16);
+  --radius: 2px;
+  --radius-lg: 4px;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+[data-theme="dark"] {
+  --ivory: #1A1210;
+  --ivory-2: #241E1B;
+  --black: #FAF7F2;
+  --charcoal: #E8DDD5;
+  --warm-grey: #A89F95;
+  --blush: #3A2820;
+  --text: #FAF7F2;
+  --text-muted: #A89F95;
+  --bg: #1A1210;
+  --bg-2: #241E1B;
+  --card-bg: #2E2820;
+  --border: #3A302A;
+  --header-bg: rgba(26,18,16,0.96);
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-hover: 0 12px 48px rgba(0,0,0,0.5);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: background var(--transition), color var(--transition);
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* ── ANNOUNCE BAR ── */
+.announce-bar {
+  background: var(--black);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 10px 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  overflow: hidden;
+}
+.announce-bar span {
+  display: inline-block;
+  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+}
+@keyframes ticker {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: fixed;
+  top: 40px;
+  left: 0; right: 0;
+  z-index: 900;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: top var(--transition), box-shadow var(--transition);
+}
+.site-header.scrolled { top: 0; box-shadow: var(--shadow); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  height: 70px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brand-logo-img {
+  display: block;
+  width: 44px;
+  height: auto;
+  object-fit: contain;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-main {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+.logo-sub {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.6;
+}
+
+.main-nav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+.nav-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  transition: color var(--transition);
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; left: 14px; right: 14px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+  transform-origin: left;
+}
+.nav-link:hover, .nav-link.active { color: var(--text); }
+.nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.icon-btn {
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  color: var(--text);
+  transition: background var(--transition), color var(--transition);
+  position: relative;
+}
+.icon-btn:hover { background: var(--bg-2); }
+
+.badge {
+  position: absolute;
+  top: 2px; right: 2px;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 0.55rem;
+  font-weight: 700;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+}
+
+.theme-toggle .moon-icon { display: none; }
+[data-theme="dark"] .theme-toggle .sun-icon { display: none; }
+[data-theme="dark"] .theme-toggle .moon-icon { display: block; }
+
+.header-cta {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header-cta { display: inline-flex; }
+}
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform var(--transition), opacity var(--transition);
+}
+.nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+@media (min-width: 1024px) {
+  .nav-toggle { display: none; }
+}
+
+/* ── MOBILE NAV ── */
+@media (max-width: 1023px) {
+  .main-nav {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: 280px;
+    background: var(--card-bg);
+    flex-direction: column;
+    padding: 100px 32px 32px;
+    gap: 4px;
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    z-index: 800;
+    box-shadow: var(--shadow-hover);
+    margin-left: 0;
+  }
+  .main-nav.open { transform: translateX(0); }
+  .nav-link { font-size: 1rem; padding: 12px 0; }
+}
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26,18,16,0.5);
+  z-index: 799;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+.mobile-overlay.active { opacity: 1; pointer-events: all; }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+  border: 1.5px solid transparent;
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+.btn-gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,168,76,0.4); }
+
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.btn-primary:hover { background: var(--charcoal); }
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--text);
+}
+.btn-outline-dark:hover { background: var(--text); color: var(--bg); }
+
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.6);
+}
+.btn-outline-light:hover { background: rgba(255,255,255,0.15); border-color: white; }
+
+.btn-full { width: 100%; }
+
+/* ── SECTION DEFAULTS ── */
+.section { padding: 96px 0; }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 110px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--ivory-2) 0%, var(--blush) 50%, var(--ivory) 100%);
+  z-index: 0;
+}
+
+[data-theme="dark"] .hero-bg {
+  background: linear-gradient(135deg, #1A1210 0%, #2E1E18 50%, #1A1210 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 48px 60px 64px;
+}
+
+.hero-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+.hero-headline em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+.hero-actions .btn-outline-light {
+  color: var(--text);
+  border-color: var(--border);
+}
+.hero-actions .btn-outline-light:hover {
+  background: var(--bg-2);
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.stat { display: flex; flex-direction: column; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 64px 60px 0;
+  height: 100vh;
+}
+
+.hero-img-frame {
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 3/4;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.hero-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #E8D5C0 0%, #D4B896 40%, #C9A87A 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+[data-theme="dark"] .hero-img-placeholder {
+  background: linear-gradient(160deg, #3A2820 0%, #4A3428 40%, #5A4035 100%);
+}
+
+.placeholder-fashion {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Model silhouette */
+.model-silhouette {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.model-head {
+  width: 60px; height: 75px;
+  background: #D4A875;
+  border-radius: 50% 50% 45% 45%;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.model-neck {
+  width: 22px; height: 30px;
+  background: #C89860;
+  margin-top: -5px;
+  flex-shrink: 0;
+}
+.model-body {
+  width: 140px;
+  flex: 1;
+  background: linear-gradient(180deg, #8B0000 0%, #6B0000 60%, #4A0000 100%);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  margin-top: -2px;
+}
+.model-earring {
+  position: absolute;
+  top: -40px;
+  width: 6px; height: 28px;
+  background: var(--gold);
+  border-radius: 3px;
+}
+.model-earring.left { left: -22px; }
+.model-earring.right { right: -22px; }
+.model-earring::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; left: 50%;
+  transform: translateX(-50%);
+  width: 12px; height: 12px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.model-bag {
+  width: 80px; height: 60px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  border-radius: 4px 4px 8px 8px;
+  position: absolute;
+  bottom: 60px; right: -30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.model-bag::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: 15px;
+  width: 50px; height: 14px;
+  border: 3px solid var(--gold-dark);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.floating-tag {
+  position: absolute;
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  letter-spacing: 0.05em;
+  animation: float 3s ease-in-out infinite alternate;
+}
+.tag-1 { top: 20%; left: 8%; animation-delay: 0s; }
+.tag-2 { bottom: 25%; right: 6%; animation-delay: 1.5s; color: var(--gold); }
+@keyframes float {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-8px); }
+}
+
+.hero-accent-ring {
+  position: absolute;
+  width: 500px; height: 500px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  opacity: 0.15;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.hero-accent-ring::before {
+  content: '';
+  position: absolute;
+  inset: 30px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 64px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.scroll-line {
+  width: 40px; height: 1px;
+  background: var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--gold-dark);
+  animation: scroll-anim 2s ease-in-out infinite;
+}
+@keyframes scroll-anim {
+  to { left: 200%; }
+}
+
+/* ── CATEGORIES ── */
+.categories-section { background: var(--bg-2); }
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cat-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.cat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+
+.cat-img {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  position: relative;
+}
+
+.cat-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.earring-placeholder { background: linear-gradient(135deg, #F5E6D3 0%, #E8C9A0 100%); }
+[data-theme="dark"] .earring-placeholder { background: linear-gradient(135deg, #3A2820 0%, #4A3020 100%); }
+.earring-visual { position: relative; }
+.earring-hook {
+  width: 4px; height: 20px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+.earring-drop {
+  width: 30px; height: 50px;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  margin: 4px auto 0;
+  position: relative;
+}
+.earring-gem {
+  width: 14px; height: 14px;
+  background: radial-gradient(circle, #FF9CC0, #C9547A);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 2px 8px rgba(201,84,122,0.4);
+}
+
+.small-bag-visual { background: linear-gradient(135deg, #E8D4C0 0%, #D4B09A 100%); }
+[data-theme="dark"] .small-bag-visual { background: linear-gradient(135deg, #2E2018 0%, #3A2820 100%); }
+.bag-body { background: var(--gold); border-radius: 4px 4px 8px 8px; }
+.bag-body.small { width: 70px; height: 55px; }
+.bag-body.large { width: 90px; height: 75px; }
+.bag-handle { border: 3px solid var(--gold-dark); border-bottom: none; border-radius: 4px 4px 0 0; }
+.small-handle { width: 44px; height: 20px; margin: 0 auto; }
+.large-handle { width: 60px; height: 28px; margin: 0 auto; }
+.bag-clasp {
+  width: 12px; height: 8px;
+  background: var(--gold-dark);
+  margin: 4px auto 0;
+  border-radius: 2px;
+}
+
+.large-bag-visual { background: linear-gradient(135deg, #DDE3EA 0%, #BBC7D5 100%); }
+[data-theme="dark"] .large-bag-visual { background: linear-gradient(135deg, #1E2028 0%, #282C38 100%); }
+.bag-pocket {
+  width: 50px; height: 20px;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 2px;
+  margin: 6px auto 0;
+}
+
+.party-placeholder {
+  background: linear-gradient(135deg, #1A0A0A 0%, #2E1010 50%, #1A0A0A 100%);
+  flex-direction: column;
+  gap: 8px;
+}
+.clutch-body {
+  width: 100px; height: 50px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  border-radius: 4px;
+}
+.clutch-gems { display: flex; gap: 8px; }
+.clutch-gems span {
+  width: 10px; height: 10px;
+  background: #FF3E96;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #FF3E96;
+}
+.sparkles {
+  color: var(--gold);
+  font-size: 0.9rem;
+  letter-spacing: 8px;
+  opacity: 0.7;
+}
+
+.cat-info {
+  padding: 20px 16px;
+  background: var(--card-bg);
+}
+.cat-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.cat-info span {
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* ── PRODUCT CARD ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+}
+.product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+.product-img {
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.05em;
+  position: relative;
+  transition: transform var(--transition);
+}
+.product-card:hover .product-placeholder { transform: scale(1.03); }
+
+.product-badges {
+  position: absolute;
+  top: 12px; left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+.badge-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+.badge-new { background: var(--gold); color: var(--black); }
+.badge-hot { background: #E53935; color: white; }
+.badge-sale { background: var(--black); color: white; }
+
+.product-actions {
+  position: absolute;
+  top: 12px; right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: all var(--transition);
+}
+.product-card:hover .product-actions { opacity: 1; transform: translateX(0); }
+
+.product-action-btn {
+  width: 36px; height: 36px;
+  background: var(--white);
+  border: none;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background var(--transition), color var(--transition);
+}
+.product-action-btn:hover { background: var(--gold); color: var(--black); }
+
+.product-info { padding: 16px; }
+.product-cat {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.product-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 1px; }
+.rating-count { font-size: 0.72rem; color: var(--text-muted); }
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.price-wrap { display: flex; align-items: baseline; gap: 6px; }
+.price {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.price-original {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+.add-to-cart {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+.add-to-cart:hover { background: var(--gold); color: var(--black); transform: scale(1.02); }
+
+/* ── CAROUSEL ── */
+.carousel-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  flex: 1;
+}
+.carousel-btn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  font-size: 1.1rem;
+  color: var(--text);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow);
+}
+.carousel-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+.carousel-item {
+  min-width: calc(25% - 15px);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.dot.active { background: var(--gold); width: 24px; border-radius: 4px; }
+
+/* ── WHY ── */
+.why-section { background: var(--black); }
+[data-theme="dark"] .why-section { background: #0E0A09; }
+.why-section .section-title { color: var(--white); }
+.why-section .section-eyebrow { color: var(--gold-light); }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.why-card {
+  text-align: center;
+  padding: 40px 24px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.why-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+
+.why-icon {
+  width: 64px; height: 64px;
+  background: rgba(201,168,76,0.1);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.2);
+  transition: background var(--transition);
+}
+.why-card:hover .why-icon { background: rgba(201,168,76,0.2); }
+
+.why-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.why-card p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+/* ── UDAIPUR STRIP ── */
+.udaipur-strip {
+  background: linear-gradient(135deg, var(--blush) 0%, var(--ivory-2) 100%);
+  overflow: hidden;
+}
+[data-theme="dark"] .udaipur-strip {
+  background: linear-gradient(135deg, #2E1E18 0%, #241E1B 100%);
+}
+.udaipur-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.udaipur-text { padding: 24px 0; }
+.udaipur-text .section-eyebrow { text-align: left; }
+.udaipur-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  color: var(--text);
+  margin: 12px 0 20px;
+}
+.udaipur-text p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+.udaipur-visual { display: flex; align-items: center; justify-content: center; }
+
+/* Palace SVG illustration */
+.palace-silhouette { position: relative; width: 360px; height: 240px; }
+.palace-body {
+  position: absolute;
+  bottom: 60px;
+  left: 50%; transform: translateX(-50%);
+  width: 280px; height: 120px;
+  background: linear-gradient(180deg, #C9A84C 0%, #9E7A30 100%);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 0;
+  overflow: hidden;
+}
+.palace-arch {
+  width: 60px; height: 80px;
+  background: var(--bg);
+  border-radius: 30px 30px 0 0;
+  position: absolute;
+  bottom: 0;
+}
+.palace-arch.arch-1 { left: 20px; }
+.palace-arch.arch-2 { left: 50%; transform: translateX(-50%); }
+.palace-arch.arch-3 { right: 20px; }
+.palace-tower {
+  position: absolute;
+  bottom: 180px;
+  width: 40px; height: 80px;
+  background: linear-gradient(180deg, #E8CC7A 0%, #C9A84C 100%);
+  border-radius: 2px;
+}
+.left-tower { left: 50%; margin-left: -80px; }
+.right-tower { left: 50%; margin-left: 40px; }
+.palace-tower::before {
+  content: '';
+  position: absolute;
+  top: -20px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 24px solid #E8CC7A;
+}
+.palace-lake {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(180deg, rgba(100,160,200,0.4) 0%, rgba(100,160,200,0.1) 100%);
+  border-radius: 0 0 4px 4px;
+}
+[data-theme="dark"] .palace-arch { background: #241E1B; }
+[data-theme="dark"] .palace-lake { background: linear-gradient(180deg, rgba(100,160,200,0.2) 0%, rgba(100,160,200,0.05) 100%); }
+
+/* ── REVIEWS ── */
+.reviews-section { background: var(--bg); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.review-card {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.featured-review {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(201,168,76,0.04) 100%);
+  position: relative;
+  top: -16px;
+}
+.review-stars { color: var(--gold); font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
+.review-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 44px; height: 44px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  color: var(--black);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.reviewer-name {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.reviewer-loc {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ── GALLERY ── */
+.gallery-section { background: var(--bg-2); }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 200px;
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+
+.g1 { background: linear-gradient(135deg, #C9A84C, #8B6520); grid-row: 1 / 3; }
+.g2 { background: linear-gradient(135deg, #8B0000, #C83C3C); }
+.g3 { background: linear-gradient(135deg, #1A1A4A, #3C3CAA); }
+.g4 { background: linear-gradient(135deg, #0A3A2A, #1A7A5A); }
+.g5 { background: linear-gradient(135deg, #4A1A2A, #AA3C6A); }
+.g6 { background: linear-gradient(135deg, #2A2A1A, #7A7A2A); }
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition);
+}
+.gallery-item:hover .gallery-overlay { background: rgba(0,0,0,0.4); }
+.gallery-overlay svg { opacity: 0; transition: opacity var(--transition); }
+.gallery-item:hover .gallery-overlay svg { opacity: 1; }
+
+/* ── NEWSLETTER ── */
+.newsletter-section {
+  background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 100%);
+  padding: 80px 0;
+}
+.newsletter-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.newsletter-text .section-eyebrow { text-align: left; }
+.newsletter-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: var(--white);
+  margin: 12px 0 16px;
+}
+.newsletter-text p { color: rgba(255,255,255,0.55); }
+.form-group {
+  display: flex;
+  gap: 0;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.form-group input {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 14px 20px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem;
+  color: var(--white);
+  outline: none;
+}
+.form-group input::placeholder { color: rgba(255,255,255,0.35); }
+.form-group .btn { border-radius: 0; border: none; }
+.form-note { font-size: 0.72rem; color: rgba(255,255,255,0.3); margin-top: 10px; letter-spacing: 0.05em; }
+
+/* ── WHATSAPP FLOAT ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 800;
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
+  animation: pulse-green 3s ease-in-out infinite;
+}
+.whatsapp-float:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 4px 30px rgba(37,211,102,0.65); }
+}
+
+/* ── CART DRAWER ── */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26,18,16,0.5);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+.cart-overlay.active { opacity: 1; pointer-events: all; }
+
+.cart-drawer {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: 400px;
+  background: var(--card-bg);
+  z-index: 1001;
+  transform: translateX(100%);
+  transition: transform var(--transition);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-hover);
+}
+.cart-drawer.open { transform: translateX(0); }
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px;
+  border-bottom: 1px solid var(--border);
+}
+.cart-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.cart-close {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.cart-close:hover { background: var(--bg-2); }
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+.cart-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+.cart-empty svg { margin: 0 auto 16px; opacity: 0.3; }
+.cart-empty p { font-size: 0.9rem; margin-bottom: 24px; }
+
+.cart-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.cart-item-img {
+  width: 80px; height: 80px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cart-item-img div {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+}
+.cart-item-info { flex: 1; }
+.cart-item-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.cart-item-price { font-size: 0.88rem; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.qty-btn {
+  width: 26px; height: 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text);
+  transition: all var(--transition);
+}
+.qty-btn:hover { border-color: var(--gold); color: var(--gold); }
+.qty-val { font-size: 0.88rem; font-weight: 600; min-width: 24px; text-align: center; }
+.cart-item-remove { font-size: 0.7rem; color: var(--text-muted); cursor: pointer; margin-top: 6px; }
+.cart-item-remove:hover { color: #E53935; }
+
+.cart-footer {
+  padding: 24px;
+  border-top: 1px solid var(--border);
+}
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+#cartTotal { font-size: 1.2rem; color: var(--gold); }
+.cart-note {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* ── FOOTER ── */
+.site-footer { background: var(--charcoal); }
+[data-theme="dark"] .site-footer { background: #0E0A09; }
+
+.footer-top { padding: 72px 0 48px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.8fr;
+  gap: 48px;
+}
+
+.footer-logo { margin-bottom: 20px; }
+.footer-logo .logo-main { color: var(--white); }
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.social-links { display: flex; gap: 12px; }
+.social-links a {
+  width: 38px; height: 38px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.5);
+  transition: all var(--transition);
+}
+.social-links a:hover { border-color: var(--gold); color: var(--gold); }
+
+.footer-links h4 {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links ul a {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  transition: color var(--transition);
+}
+.footer-links ul a:hover { color: var(--gold); }
+
+.footer-contact h4 {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.contact-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+}
+.contact-item svg { flex-shrink: 0; color: var(--gold); margin-top: 2px; }
+.store-hours { margin-top: 16px; font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; }
+.store-hours strong { color: var(--gold); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 24px 0;
+}
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+.payment-badges { display: flex; gap: 8px; }
+.pay-badge {
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 3px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--black);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+[data-theme="dark"] .toast { background: var(--gold); color: var(--black); }
+
+/* ── ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .carousel-item { min-width: calc(33.333% - 14px); }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 80px;
+  }
+  .hero-content { padding: 60px 32px 40px; }
+  .hero-visual { display: none; }
+  .scroll-indicator { display: none; }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .featured-review { top: 0; }
+  .udaipur-inner { grid-template-columns: 1fr; gap: 40px; }
+  .udaipur-visual { display: none; }
+  .newsletter-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .carousel-item { min-width: calc(50% - 10px); }
+  .gallery-grid { grid-template-rows: 160px 160px; }
+}
+
+@media (max-width: 640px) {
+  .header-inner { padding: 0 16px; }
+  .announce-bar span { animation: none; }
+  .hero-content { padding: 50px 20px 40px; }
+  .hero-stats { gap: 20px; }
+  .hero-actions { flex-direction: column; }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .product-actions { display: none; }
+  .why-grid { grid-template-columns: 1fr; gap: 16px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: 140px 140px 140px; }
+  .g1 { grid-row: auto; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; }
+  .cart-drawer { width: 100%; }
+  .whatsapp-float span { display: none; }
+  .whatsapp-float { padding: 14px; border-radius: 50%; width: 54px; height: 54px; justify-content: center; }
+  .section { padding: 64px 0; }
+  .carousel-item { min-width: calc(100% - 0px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar">
+  <span>✦ Free shipping on orders above ₹999 &nbsp;|&nbsp; WhatsApp orders: +91 98290 XXXXX &nbsp;|&nbsp; New arrivals every Friday ✦</span>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="index.html" class="brand-logo">
+      <img src="logo.jpg" alt="Old Town Fashions logo" class="brand-logo-img" />
+      <div class="logo-text">
+        <span class="logo-main">Old Town</span>
+        <span class="logo-sub">Fashions</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="#categories" class="nav-link">Collections</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn wishlist-btn" aria-label="Wishlist">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="badge" id="wishlistCount">0</span>
+      </button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+      <a href="shop.html" class="btn btn-primary header-cta">Shop Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Udaipur's Finest Boutique</p>
+    <h1 class="hero-headline">Elevate Your Style<br/><em>with Old Town Fashions</em></h1>
+    <p class="hero-sub">Exclusive Earrings &amp; Designer Handbags<br/>crafted for the modern Indian woman</p>
+    <div class="hero-actions">
+      <a href="shop.html" class="btn btn-gold">Shop the Collection</a>
+      <a href="#categories" class="btn btn-outline-light">Explore Categories</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">2000+</span><span class="stat-label">Happy Customers</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Unique Designs</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">5★</span><span class="stat-label">Rated Boutique</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img-frame">
+      <div class="hero-img-placeholder">
+        <div class="placeholder-fashion">
+          <div class="model-silhouette">
+            <div class="model-head"></div>
+            <div class="model-neck"></div>
+            <div class="model-body">
+              <div class="model-earring left"></div>
+              <div class="model-earring right"></div>
+            </div>
+            <div class="model-bag"></div>
+          </div>
+          <div class="floating-tag tag-1">✦ New Arrival</div>
+          <div class="floating-tag tag-2">₹1,299</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-accent-ring"></div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- FEATURED CATEGORIES -->
+<section class="categories-section section" id="categories">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Curated For You</p>
+      <h2 class="section-title">Our Collections</h2>
+      <p class="section-desc">Handpicked fashion accessories that speak your story</p>
+    </div>
+    <div class="categories-grid">
+      <a href="shop.html?cat=earrings" class="cat-card cat-earrings">
+        <div class="cat-img">
+          <div class="cat-placeholder earring-placeholder">
+            <div class="earring-visual">
+              <div class="earring-hook"></div>
+              <div class="earring-drop"></div>
+              <div class="earring-gem"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cat-info">
+          <h3>Fashion Earrings</h3>
+          <span>120+ styles →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=small-bags" class="cat-card cat-small">
+        <div class="cat-img">
+          <div class="cat-placeholder bag-placeholder small-bag-visual">
+            <div class="bag-body small"></div>
+            <div class="bag-handle small-handle"></div>
+            <div class="bag-clasp"></div>
+          </div>
+        </div>
+        <div class="cat-info">
+          <h3>Small Handbags</h3>
+          <span>85+ styles →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=large-bags" class="cat-card cat-large">
+        <div class="cat-img">
+          <div class="cat-placeholder bag-placeholder large-bag-visual">
+            <div class="bag-body large"></div>
+            <div class="bag-handle large-handle"></div>
+            <div class="bag-pocket"></div>
+          </div>
+        </div>
+        <div class="cat-info">
+          <h3>Large Handbags</h3>
+          <span>95+ styles →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=party" class="cat-card cat-party">
+        <div class="cat-img">
+          <div class="cat-placeholder party-placeholder">
+            <div class="clutch-body"></div>
+            <div class="clutch-gems">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="sparkles">✦ ✦ ✦</div>
+          </div>
+        </div>
+        <div class="cat-info">
+          <h3>Party Collection</h3>
+          <span>60+ styles →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BEST SELLERS -->
+<section class="products-section section" id="bestsellers">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Customer Favourites</p>
+      <h2 class="section-title">Best Sellers</h2>
+    </div>
+    <div class="products-grid" id="bestSellersGrid">
+      <!-- Injected by JS -->
+    </div>
+    <div class="section-cta">
+      <a href="shop.html" class="btn btn-outline-dark">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS CAROUSEL -->
+<section class="arrivals-section section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Just Landed</p>
+      <h2 class="section-title">New Arrivals</h2>
+    </div>
+    <div class="carousel-wrap">
+      <button class="carousel-btn prev" id="carouselPrev">&#8592;</button>
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Injected by JS -->
+      </div>
+      <button class="carousel-btn next" id="carouselNext">&#8594;</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">The Old Town Promise</p>
+      <h2 class="section-title">Why Choose Us</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Premium Quality</h3>
+        <p>Every piece is hand-selected for superior craftsmanship and durability. Quality you can feel.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Trendy Designs</h3>
+        <p>Curated from the latest fashion trends — from Bollywood glam to everyday chic.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <h3>Secure Payments</h3>
+        <p>UPI, cards, net banking via Razorpay. 100% safe and encrypted transactions.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Pan-India shipping within 3–5 days. Express delivery available for Udaipur orders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UDAIPUR STRIP -->
+<section class="udaipur-strip">
+  <div class="udaipur-inner">
+    <div class="udaipur-text">
+      <p class="strip-eyebrow">Rooted in Rajasthan</p>
+      <h2>Born in the City of Lakes</h2>
+      <p>Old Town Fashions draws inspiration from the timeless elegance of Udaipur — its intricate architecture, vibrant bazaars, and royal heritage. Every accessory carries a piece of this magic.</p>
+      <a href="about.html" class="btn btn-gold">Our Story</a>
+    </div>
+    <div class="udaipur-visual">
+      <div class="palace-silhouette">
+        <div class="palace-body">
+          <div class="palace-arch arch-1"></div>
+          <div class="palace-arch arch-2"></div>
+          <div class="palace-arch arch-3"></div>
+        </div>
+        <div class="palace-tower left-tower"></div>
+        <div class="palace-tower right-tower"></div>
+        <div class="palace-lake"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+<section class="reviews-section section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Real Stories</p>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The earrings I bought for my sister's wedding were absolutely stunning. Everyone kept asking where I got them from!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">P</div>
+          <div>
+            <span class="reviewer-name">Priya Sharma</span>
+            <span class="reviewer-loc">Jaipur, Rajasthan</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card featured-review">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Visited their Udaipur store as a tourist and fell in love. The handbags are such great quality — I ordered two more online once I got home!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <span class="reviewer-name">Ananya Menon</span>
+            <span class="reviewer-loc">Bangalore, Karnataka</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Fast delivery and beautiful packaging. The party bag looks even better in person. Old Town Fashions is my go-to for gifts!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">M</div>
+          <div>
+            <span class="reviewer-name">Meera Patel</span>
+            <span class="reviewer-loc">Mumbai, Maharashtra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM GALLERY -->
+<section class="gallery-section section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">@oldtownfashions</p>
+      <h2 class="section-title">Style Moments</h2>
+      <p class="section-desc">Follow us for daily fashion inspiration</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item g1"><div class="gallery-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="none" stroke="white" stroke-width="1.5" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line fill="none" stroke="white" stroke-width="1.5" x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="gallery-item g2"><div class="gallery-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="none" stroke="white" stroke-width="1.5" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line fill="none" stroke="white" stroke-width="1.5" x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="gallery-item g3"><div class="gallery-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="none" stroke="white" stroke-width="1.5" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line fill="none" stroke="white" stroke-width="1.5" x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="gallery-item g4"><div class="gallery-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="none" stroke="white" stroke-width="1.5" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line fill="none" stroke="white" stroke-width="1.5" x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="gallery-item g5"><div class="gallery-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="none" stroke="white" stroke-width="1.5" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line fill="none" stroke="white" stroke-width="1.5" x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+      <div class="gallery-item g6"><div class="gallery-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="none" stroke="white" stroke-width="1.5" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line fill="none" stroke="white" stroke-width="1.5" x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+    </div>
+    <div class="section-cta">
+      <a href="https://www.instagram.com/the_old_town_fashions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn btn-outline-dark" target="_blank">Follow on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <p class="section-eyebrow">Stay in the Loop</p>
+        <h2>Get First Access to New Arrivals</h2>
+        <p>Join 3,000+ fashion-forward women. Get exclusive deals, style tips, and early access to sales.</p>
+      </div>
+      <div class="newsletter-form">
+        <div class="form-group">
+          <input type="email" id="nlEmail" placeholder="Your email address" />
+          <button class="btn btn-gold" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+        <p class="form-note">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/917427098090?text=Hi%20Old%20Town%20Fashions!%20I%20want%20to%20place%20an%20order." class="whatsapp-float" target="_blank" aria-label="Order on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span>Order on WhatsApp</span>
+</a>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Bag</h3>
+    <button class="cart-close" id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <p>Your bag is empty</p>
+      <a href="shop.html" class="btn btn-gold">Start Shopping</a>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">₹0</span>
+    </div>
+    <a href="checkout.html" class="btn btn-gold btn-full">Proceed to Checkout</a>
+    <p class="cart-note">Free shipping on orders above ₹999</p>
+  </div>
+</div>
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo footer-logo">
+          <span class="logo-ornament">✦</span>
+          <div>
+            <span class="logo-main">Old Town</span>
+            <span class="logo-sub">Fashions</span>
+          </div>
+        </a>
+        <p>Luxury fashion accessories from the heart of Udaipur, Rajasthan. Bringing the spirit of Rajputana to modern women across India.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 12a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.9 6.3 9.5-.1-.8-.2-2.2 0-3.1.2-.8 1.5-6.2 1.5-6.2s-.4-.8-.4-1.9c0-1.8 1-3.1 2.3-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1.1 4.2-.3 1.2.6 2.2 1.8 2.2 2.2 0 3.7-2.8 3.7-6.1 0-2.6-1.8-4.4-4.5-4.4-3 0-4.8 2.3-4.8 4.6 0 .9.3 1.8.8 2.3.1.1.1.2.1.3-.1.3-.3 1.1-.3 1.2-.1.2-.2.2-.4.1-1.4-.6-2.3-2.7-2.3-4.3 0-3.5 2.5-6.7 7.3-6.7 3.8 0 6.8 2.7 6.8 6.4 0 3.8-2.4 6.9-5.7 6.9-1.1 0-2.2-.6-2.5-1.3l-.7 2.6c-.3 1-.9 2.2-1.4 3 1 .3 2.1.5 3.2.5 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="shop.html?cat=earrings">Earrings</a></li>
+          <li><a href="shop.html?cat=bags">Handbags</a></li>
+          <li><a href="shop.html?cat=party">Party Collection</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Return & Exchange</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Visit Us</h4>
+        <div class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>The Old Town, Jagdish Temple Road, Udaipur, Rajasthan 313001</span>
+        </div>
+        <div class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.43 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          <span>+91 7427098090</span>
+        </div>
+        <div class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>abhishekvyas8090@gmail.com</span>
+        </div>
+        <div class="store-hours">
+          <strong>Store Hours:</strong><br/>
+          Mon – Sat: 10am – 8pm<br/>
+          Sun: 11am – 6pm
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2025 Old Town Fashions. All rights reserved.</p>
+      <div class="payment-badges">
+        <span class="pay-badge">UPI</span>
+        <span class="pay-badge">Visa</span>
+        <span class="pay-badge">Mastercard</span>
+        <span class="pay-badge">Razorpay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

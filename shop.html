@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Old Town Fashions | Earrings & Handbags Udaipur</title>
+  <meta name="description" content="Browse all earrings, handbags, party wear, and traditional accessories from Old Town Fashions, Udaipur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .shop-layout { display: grid; grid-template-columns: 260px 1fr; gap: 40px; padding: 40px 0 80px; }
+    .shop-sidebar { position: sticky; top: 90px; height: fit-content; }
+    .filter-group { margin-bottom: 32px; }
+    .filter-title {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      cursor: pointer;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+    .filter-option:hover, .filter-option.active { color: var(--text); }
+    .filter-option input[type="checkbox"] { accent-color: var(--gold); width: 15px; height: 15px; }
+    .filter-count { margin-left: auto; font-size: 0.72rem; color: var(--text-muted); }
+    .price-range { display: flex; gap: 10px; align-items: center; }
+    .price-input {
+      flex: 1;
+      padding: 8px 10px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.83rem;
+      color: var(--text);
+      outline: none;
+    }
+    .price-input:focus { border-color: var(--gold); }
+    .shop-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .shop-count { font-size: 0.85rem; color: var(--text-muted); }
+    .shop-controls { display: flex; align-items: center; gap: 12px; }
+    .search-wrap { position: relative; }
+    .search-input {
+      padding: 10px 16px 10px 40px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.83rem;
+      color: var(--text);
+      outline: none;
+      width: 220px;
+      transition: border-color var(--transition);
+    }
+    .search-input:focus { border-color: var(--gold); }
+    .search-icon {
+      position: absolute;
+      left: 14px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    .sort-select {
+      padding: 10px 16px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.83rem;
+      color: var(--text);
+      outline: none;
+      cursor: pointer;
+    }
+    .shop-page-hero {
+      background: linear-gradient(135deg, var(--black) 0%, #3A2820 100%);
+      padding: 120px 0 60px;
+      text-align: center;
+    }
+    [data-theme="dark"] .shop-page-hero { background: linear-gradient(135deg, #0E0A09 0%, #1A1210 100%); }
+    .shop-page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .shop-page-hero p { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+    .cat-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+      justify-content: center;
+    }
+    .cat-pill {
+      padding: 8px 20px;
+      border-radius: 40px;
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: 'Jost', sans-serif;
+    }
+    .cat-pill:hover, .cat-pill.active { background: var(--gold); border-color: var(--gold); color: var(--black); }
+    .apply-filter-btn {
+      width: 100%;
+      margin-top: 8px;
+    }
+    .mobile-filter-toggle {
+      display: none;
+    }
+    @media (max-width: 900px) {
+      .shop-layout { grid-template-columns: 1fr; }
+      .shop-sidebar { position: static; }
+      .mobile-filter-toggle { display: flex; }
+      .sidebar-inner { display: none; }
+      .sidebar-inner.open { display: block; }
+    }
+    @media (max-width: 640px) {
+      .search-input { width: 160px; }
+      .products-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="announce-bar">
+  <span>✦ Free shipping on orders above ₹999 &nbsp;|&nbsp; WhatsApp orders: +91 98290 XXXXX &nbsp;|&nbsp; New arrivals every Friday ✦</span>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <a href="index.html" class="brand-logo">
+      <span class="logo-ornament">✦</span>
+      <div><span class="logo-main">Old Town</span><span class="logo-sub">Fashions</span></div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link active">Shop</a>
+      <a href="index.html#categories" class="nav-link">Collections</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" id="themeToggle">
+        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="icon-btn wishlist-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="badge" id="wishlistCount">0</span></button>
+      <button class="icon-btn cart-btn" id="cartBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="badge" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- SHOP HERO -->
+<div class="shop-page-hero">
+  <div class="container">
+    <p class="section-eyebrow">Discover Our Collection</p>
+    <h1>All Products</h1>
+    <p>Handpicked earrings, handbags & accessories from Udaipur's finest boutique</p>
+    <div class="cat-pills" id="catPills">
+      <span class="cat-pill active" data-cat="all">All Items</span>
+      <span class="cat-pill" data-cat="earrings">Earrings</span>
+      <span class="cat-pill" data-cat="small-bags">Small Bags</span>
+      <span class="cat-pill" data-cat="large-bags">Large Bags</span>
+      <span class="cat-pill" data-cat="party">Party Collection</span>
+    </div>
+  </div>
+</div>
+
+<!-- SHOP BODY -->
+<div class="container">
+  <div class="shop-layout">
+    <!-- SIDEBAR -->
+    <aside class="shop-sidebar">
+      <button class="btn btn-outline-dark mobile-filter-toggle" id="filterToggle" style="margin-bottom:16px; width:100%;">
+        ⚙ Filters
+      </button>
+      <div class="sidebar-inner" id="sidebarInner">
+        <div class="filter-group">
+          <div class="filter-title">Category</div>
+          <label class="filter-option"><input type="checkbox" data-cat="earrings" /> Earrings <span class="filter-count">42</span></label>
+          <label class="filter-option"><input type="checkbox" data-cat="small-bags" /> Small Handbags <span class="filter-count">28</span></label>
+          <label class="filter-option"><input type="checkbox" data-cat="large-bags" /> Large Handbags <span class="filter-count">31</span></label>
+          <label class="filter-option"><input type="checkbox" data-cat="party" /> Party Collection <span class="filter-count">19</span></label>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Price Range</div>
+          <div class="price-range">
+            <input class="price-input" type="number" placeholder="₹ Min" id="priceMin" />
+            <span style="color:var(--text-muted)">–</span>
+            <input class="price-input" type="number" placeholder="₹ Max" id="priceMax" />
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Rating</div>
+          <label class="filter-option"><input type="checkbox" /> 5 Stars ★★★★★ <span class="filter-count">12</span></label>
+          <label class="filter-option"><input type="checkbox" checked /> 4+ Stars ★★★★☆ <span class="filter-count">54</span></label>
+          <label class="filter-option"><input type="checkbox" /> 3+ Stars ★★★☆☆ <span class="filter-count">19</span></label>
+        </div>
+        <button class="btn btn-gold apply-filter-btn" onclick="applyFilters()">Apply Filters</button>
+        <button class="btn btn-outline-dark apply-filter-btn" style="margin-top:8px;" onclick="clearFilters()">Clear All</button>
+      </div>
+    </aside>
+
+    <!-- PRODUCT AREA -->
+    <div class="shop-main">
+      <div class="shop-header">
+        <div class="shop-count" id="shopCount">Showing all <strong>14</strong> products</div>
+        <div class="shop-controls">
+          <div class="search-wrap">
+            <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input class="search-input" type="text" placeholder="Search products..." id="searchInput" />
+          </div>
+          <select class="sort-select" id="sortSelect">
+            <option value="default">Sort by: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+            <option value="newest">Newest First</option>
+          </select>
+        </div>
+      </div>
+      <div class="products-grid" id="shopGrid" style="grid-template-columns: repeat(3, 1fr);"></div>
+      <div id="noResults" style="display:none; text-align:center; padding:60px 0; color:var(--text-muted);">
+        <p style="font-size:2rem; margin-bottom:12px;">🔍</p>
+        <p>No products found. Try a different search or filter.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header"><h3>Your Bag</h3><button class="cart-close" id="cartClose">✕</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div>
+    <a href="checkout.html" class="btn btn-gold btn-full">Proceed to Checkout</a>
+    <p class="cart-note">Free shipping on orders above ₹999</p>
+  </div>
+</div>
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<a href="https://wa.me/919829000000?text=Hi%20Old%20Town%20Fashions!%20I%20want%20to%20place%20an%20order." class="whatsapp-float" target="_blank">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span>Order on WhatsApp</span>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<footer class="site-footer">
+  <div class="footer-bottom" style="border-top:none;">
+    <div class="container footer-bottom-inner">
+      <p>© 2025 Old Town Fashions. All rights reserved. | <a href="index.html" style="color:var(--gold);">Home</a></p>
+      <div class="payment-badges">
+        <span class="pay-badge">UPI</span><span class="pay-badge">Visa</span><span class="pay-badge">Razorpay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+const ALL_PRODUCTS = [
+  { id:1, name:"Polki Chandbali Earrings", cat:"earrings", price:899, original:1299, rating:4.9, reviews:128, badge:"best", emoji:"🪙", bg:"linear-gradient(135deg,#F5E6D3,#E8C9A0)", bgDark:"linear-gradient(135deg,#3A2820,#4A3020)" },
+  { id:2, name:"Jodhpuri Leather Clutch", cat:"small-bags", price:1499, original:2199, rating:4.8, reviews:84, badge:"sale", emoji:"👜", bg:"linear-gradient(135deg,#E8D4C0,#C4956A)", bgDark:"linear-gradient(135deg,#2E2018,#3A2820)" },
+  { id:3, name:"Gold Jhumka Set", cat:"earrings", price:649, original:null, rating:5.0, reviews:213, badge:"hot", emoji:"💛", bg:"linear-gradient(135deg,#FFF3CC,#F0D060)", bgDark:"linear-gradient(135deg,#2E2800,#4A4010)" },
+  { id:4, name:"Mewar Tote Bag", cat:"large-bags", price:2299, original:2999, rating:4.7, reviews:61, badge:null, emoji:"🛍️", bg:"linear-gradient(135deg,#DDE3EA,#9DB0C5)", bgDark:"linear-gradient(135deg,#1E2028,#282C38)" },
+  { id:5, name:"Rajwada Party Clutch", cat:"party", price:1849, original:2499, rating:4.9, reviews:97, badge:"new", emoji:"✨", bg:"linear-gradient(135deg,#1A0A0A,#6B1C2A)", bgDark:"linear-gradient(135deg,#1A0A0A,#6B1C2A)" },
+  { id:6, name:"Kundan Drop Earrings", cat:"earrings", price:749, original:999, rating:4.8, reviews:175, badge:"sale", emoji:"💎", bg:"linear-gradient(135deg,#F3E8F8,#D9A8E8)", bgDark:"linear-gradient(135deg,#1E0A28,#3C1A50)" },
+  { id:7, name:"Bagru Mini Sling Bag", cat:"small-bags", price:1199, original:null, rating:4.6, reviews:43, badge:"new", emoji:"🎒", bg:"linear-gradient(135deg,#F0EBE0,#C8B89A)", bgDark:"linear-gradient(135deg,#28200E,#3A300A)" },
+  { id:8, name:"Tribal Silver Earrings", cat:"earrings", price:549, original:null, rating:4.7, reviews:92, badge:null, emoji:"🌙", bg:"linear-gradient(135deg,#E8EEF3,#A8B8C8)", bgDark:"linear-gradient(135deg,#0A0E18,#1A2030)" },
+  { id:9, name:"Bandhani Print Tote", cat:"large-bags", price:1799, original:null, rating:4.6, reviews:38, badge:"new", emoji:"🌺", bg:"linear-gradient(135deg,#FF6B6B,#C92C2C)", bgDark:"linear-gradient(135deg,#FF6B6B,#C92C2C)" },
+  { id:10, name:"Mirrorwork Clutch", cat:"party", price:1599, original:2199, rating:4.8, reviews:55, badge:"new", emoji:"🪞", bg:"linear-gradient(135deg,#6B4CA0,#3A1A5A)", bgDark:"linear-gradient(135deg,#6B4CA0,#3A1A5A)" },
+  { id:11, name:"Gota Patti Earrings", cat:"earrings", price:799, original:null, rating:4.9, reviews:66, badge:"new", emoji:"🌸", bg:"linear-gradient(135deg,#FFD700,#C9A820)", bgDark:"linear-gradient(135deg,#2E2800,#4A4010)" },
+  { id:12, name:"Desert Rose Satchel", cat:"large-bags", price:2199, original:2799, rating:4.7, reviews:29, badge:"new", emoji:"🌹", bg:"linear-gradient(135deg,#D4827A,#8B4540)", bgDark:"linear-gradient(135deg,#D4827A,#8B4540)" },
+  { id:13, name:"Vintage Zardozi Bag", cat:"party", price:2499, original:3499, rating:4.9, reviews:41, badge:"new", emoji:"⚜️", bg:"linear-gradient(135deg,#2C5F2E,#1A3A1C)", bgDark:"linear-gradient(135deg,#2C5F2E,#1A3A1C)" },
+  { id:14, name:"Emerald Dangle Earrings", cat:"earrings", price:699, original:null, rating:4.7, reviews:77, badge:"new", emoji:"💚", bg:"linear-gradient(135deg,#2E7D32,#1B5E20)", bgDark:"linear-gradient(135deg,#2E7D32,#1B5E20)" },
+];
+
+let activeFilter = 'all';
+let searchQ = '';
+
+function renderShopGrid(products) {
+  const grid = document.getElementById('shopGrid');
+  const noR = document.getElementById('noResults');
+  const cnt = document.getElementById('shopCount');
+  if (!products.length) {
+    grid.innerHTML = '';
+    if (noR) noR.style.display = 'block';
+    if (cnt) cnt.innerHTML = `Showing <strong>0</strong> products`;
+    return;
+  }
+  if (noR) noR.style.display = 'none';
+  if (cnt) cnt.innerHTML = `Showing <strong>${products.length}</strong> products`;
+  grid.innerHTML = products.map(p => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const bg = isDark && p.bgDark ? p.bgDark : p.bg;
+    const badgeMap = { best:['badge-hot','🔥 Best Seller'], new:['badge-new','New'], hot:['badge-hot','🔥 Hot'], sale:['badge-sale','Sale'] };
+    const [bcls, blbl] = p.badge && badgeMap[p.badge] ? badgeMap[p.badge] : [];
+    return `<div class="product-card fade-up" data-id="${p.id}">
+      <div class="product-img">
+        <div class="product-placeholder" style="background:${bg};"><span style="font-size:3rem;">${p.emoji}</span></div>
+        ${p.badge ? `<div class="product-badges"><span class="badge-tag ${bcls}">${blbl}</span></div>` : ''}
+        <div class="product-actions">
+          <button class="product-action-btn wishlist-toggle" data-id="${p.id}" title="Wishlist"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">${p.cat.replace('-',' ')}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-rating"><span class="stars">${'★'.repeat(Math.floor(p.rating))}${'☆'.repeat(5-Math.floor(p.rating))}</span><span class="rating-count">(${p.reviews})</span></div>
+        <div class="product-footer">
+          <div class="price-wrap"><span class="price">₹${p.price.toLocaleString('en-IN')}</span>${p.original?`<span class="price-original">₹${p.original.toLocaleString('en-IN')}</span>`:''}</div>
+          <button class="add-to-cart" data-id="${p.id}">Add to Bag</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  document.querySelectorAll('.fade-up').forEach(el => setTimeout(()=>el.classList.add('visible'), 50));
+}
+
+function getFiltered() {
+  let res = [...ALL_PRODUCTS];
+  if (activeFilter !== 'all') res = res.filter(p => p.cat === activeFilter);
+  if (searchQ) res = res.filter(p => p.name.toLowerCase().includes(searchQ.toLowerCase()));
+  const min = parseInt(document.getElementById('priceMin')?.value || 0);
+  const max = parseInt(document.getElementById('priceMax')?.value || 99999);
+  if (min) res = res.filter(p => p.price >= min);
+  if (max < 99999) res = res.filter(p => p.price <= max);
+  const sort = document.getElementById('sortSelect')?.value || 'default';
+  if (sort === 'price-asc') res.sort((a,b)=>a.price-b.price);
+  else if (sort === 'price-desc') res.sort((a,b)=>b.price-a.price);
+  else if (sort === 'rating') res.sort((a,b)=>b.rating-a.rating);
+  return res;
+}
+
+function applyFilters() { renderShopGrid(getFiltered()); }
+function clearFilters() {
+  activeFilter = 'all';
+  searchQ = '';
+  document.getElementById('searchInput').value = '';
+  document.getElementById('priceMin').value = '';
+  document.getElementById('priceMax').value = '';
+  document.getElementById('sortSelect').value = 'default';
+  document.querySelectorAll('.cat-pill').forEach(p => p.classList.toggle('active', p.dataset.cat === 'all'));
+  renderShopGrid(ALL_PRODUCTS);
+}
+
+// Pill filters
+document.querySelectorAll('.cat-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    activeFilter = pill.dataset.cat;
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    renderShopGrid(getFiltered());
+  });
+});
+
+// Search
+document.getElementById('searchInput')?.addEventListener('input', e => {
+  searchQ = e.target.value;
+  renderShopGrid(getFiltered());
+});
+
+// Sort
+document.getElementById('sortSelect')?.addEventListener('change', () => renderShopGrid(getFiltered()));
+
+// Mobile filter
+document.getElementById('filterToggle')?.addEventListener('click', () => {
+  document.getElementById('sidebarInner')?.classList.toggle('open');
+});
+
+// Check URL params
+const urlCat = new URLSearchParams(window.location.search).get('cat');
+if (urlCat) {
+  activeFilter = urlCat;
+  document.querySelectorAll('.cat-pill').forEach(p => p.classList.toggle('active', p.dataset.cat === urlCat));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderShopGrid(getFiltered());
+});
+</script>
+</body>
+</html>
